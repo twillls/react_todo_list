@@ -1,0 +1,29 @@
+.todo-list {
+  margin: 0;
+  padding: 0;
+
+  .todo-list-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid grey;
+    border-bottom: 0;
+
+    &:last-child {
+      border: 1px solid grey;
+    }
+
+    &::before {
+      width: 15px;
+      height: 15px;
+      margin-right: 10px;
+      content: url('/assets/images/box.svg');
+    }
+
+    &.done {
+      &::before {
+        content: url('/assets/images/checked-box.svg');
+      }
+    }
+  }
+}

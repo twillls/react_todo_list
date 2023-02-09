@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
+h1, h2, h3, h4, h5, h6,
+p, a, li, span, button, input {
+  font-family: 'Caveat', cursive;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+}
+
+#root {
+  width: fit-content;
+  height: auto;
+  margin: auto;
+}
+
+.App {
+  h1 {
+    border-bottom: 1px solid red;
+  }
+}

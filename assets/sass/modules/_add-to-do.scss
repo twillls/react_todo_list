@@ -1,0 +1,20 @@
+.form {
+  margin-top: 10px;
+
+  .add-to-do-input {
+    margin-right: 10px;
+    padding: 10px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+
+    &:focus-visible {
+      outline: none;
+      border-bottom: 3px solid grey;
+    }
+  }
+
+  .add-to-do-button {
+    padding: 10px;
+  }
+}

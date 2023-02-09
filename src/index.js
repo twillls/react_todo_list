@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import './main.css';
 
 export default function App() {
     const [todos, setTodos] = React.useState([
@@ -33,11 +33,11 @@ function ToDoList({ todos, setTodos }) {
   }
 
   return (
-    <ul>
+    <ul className="todo-list">
       {todos.map(todo => (
         <li 
         onDoubleClick={() => handleToggleTodo(todo)}
-        style={{ textDecoration: todo.done ? 'line-through' : '' }}
+        className={`todo-list-item${todo.done ?  ' done' : ''}` }
         key={todo.id}>
           { todo.text }
           <DeleteTodo todo={todo} setTodos={setTodos} />
@@ -59,13 +59,10 @@ function DeleteTodo({ todo, setTodos }) {
 
   return (
     <span 
+    className="remove-button"
     onClick={handleDeleteTodo}
     role="button" 
-    style={{
-      color: 'red',
-      fontWeight: 'bold',
-      marginLeft: 10,
-    }}>X</span>
+    >remove</span>
   )
 }
 
@@ -87,9 +84,9 @@ function AddToDo({ setTodos }) {
   }
 
   return (
-    <form onSubmit={handleAddToDo}>
-      <input name="addToDo" placeholder="Add To-Do" ref={inputRef} />
-      <button type="submit">Submit</button>
+    <form className="form" onSubmit={handleAddToDo}>
+      <input className="add-to-do-input" name="addToDo" placeholder="Add To-Do" ref={inputRef} />
+      <button className="add-to-do-button" type="submit">Add</button>
     </form>
   );
 }

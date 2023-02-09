@@ -1,0 +1,11 @@
+.remove-button {
+  text-align: right;
+  cursor: pointer;
+  margin-right: 0;
+  margin-left: auto;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}
